@@ -1,6 +1,8 @@
 function Portal (){
     return(
-        <h1>Employees Details</h1>
+        <div class="container">
+            <h1>Employees Details</h1>
+        </div>
     )
 }
 

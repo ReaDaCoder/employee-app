@@ -1,0 +1,5 @@
+Initialiaze employeeDetails variable
+let employeeDetails = []
+Employee details will be contained in an array of objects
+Accept users input and push into array
+push() metthod will be used to take in user's information
