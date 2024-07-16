@@ -1,0 +1,4 @@
+1. Create an array of objects where the empoyees details will be pushed
+2. The program will first take in the eployees details which will be stored in the aray of bojects.
+3.create function that allow the admin to delete employess.
+4.Create a function that is going to filter out empleyess in the search bar.
