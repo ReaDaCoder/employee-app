@@ -3,7 +3,46 @@
   justify-content: center;
   margin: 25px;
   padding:50px;
+  border-radius: 18px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
 .box1{
-  background-color: aqua;
+  background-color:#AACBFF;
+  padding: 35px;
+  border-radius: 18px;
+}
+
+input{
+background-color: #fff;
+padding:8px 22px;
+border-radius: 9px;
+margin-bottom: 7px;
+border: 0;
+box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+img{
+  width:500px;
+}
+
+button{
+  color:#fff;
+  padding:8px 22px;
+  border-radius: 6px;
+  border:0;
+  background: #AACBFF;
+  transition: all 0.2s ease;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+button:active{
+  transform: scale(0.96);
+}
+
+
+
+@media(max-width:600px){
+  img{
+    display:none;
+  }
 }
