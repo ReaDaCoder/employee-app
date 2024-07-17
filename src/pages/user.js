@@ -17,9 +17,13 @@ function User(){
       const [position, setPosition]= useState('');
       const [department, setDepartment]= useState('');
 
+      const add= (()=>{
+        props.add(name, surname, email, cell, position, department);
+      })
+
 
     return(
-        <div class="wrapper">
+        <div class="wrapper"> 
             <button onClick={handleSubmit}>Switch to Admin</button>
             <div class="box1">
             <h1>User Page</h1>
@@ -35,7 +39,7 @@ function User(){
             <br/>
             <input type="text" placeholder="Enter department" onChange={(event)=> setDepartment(event.target.value)}/>
             <br/>
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={add}>Submit</button>
             </div>
             <div class="box2">
             <img src="/media/4115334.jpg" alt="illustration of an employee portal"/>
