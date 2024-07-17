@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
      <User/>
-     <Poral/>
+     <Portal/>
     </div>
   );
 }
