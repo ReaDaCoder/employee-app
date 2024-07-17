@@ -1,3 +1,6 @@
+import React from 'react';
+import Heading from '../components/heading';
+
 function User(){
     return(
         <div class="wrapper">
@@ -24,4 +27,4 @@ function User(){
     );
 }
 
-export default User
+export default User;
