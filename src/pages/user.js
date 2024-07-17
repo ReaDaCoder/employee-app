@@ -13,6 +13,7 @@ function User(){
 
     return(
         <div class="wrapper">
+            <button onClick={handleSubmit}>Switch to Admin</button>
             <div class="box1">
             <h1>User Page</h1>
             <input type="text" placeholder="Enter name"/>
