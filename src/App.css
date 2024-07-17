@@ -39,6 +39,15 @@ button:active{
   transform: scale(0.96);
 }
 
+.grid{
+  display:flex;
+  justify-content: space-around;
+}
+
+.container{
+background-color: #AACBFF;
+text-align: center;
+}
 
 
 @media(max-width:600px){

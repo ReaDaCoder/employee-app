@@ -1,7 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import Heading from '../components/heading';
 
 function User(){
+    const navigate = useNavigate();
+
+    const handleSubmit = () => {
+        // Navigate to the admin page
+        navigate('/admin');
+      };
+
+
     return(
         <div class="wrapper">
             <div class="box1">
@@ -18,10 +27,10 @@ function User(){
             <br/>
             <input type="text" placeholder="Enter department"/>
             <br/>
-            <button>Submit</button>
+            <button onClick={handleSubmit}>Submit</button>
             </div>
             <div class="box2">
-            <img src="/media/4115334.jpg" alt=""/>
+            <img src="/media/4115334.jpg" alt="illustration of an employee portal"/>
             </div>
             </div>
     );
