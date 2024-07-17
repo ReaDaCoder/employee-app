@@ -1,3 +1,11 @@
+Initialize the system
+    Display Login Page
+    If Login Successful Then
+        Display Admin Dashboard
+    Else
+        Display Error Message
+    End If
+End Function
 Initialiaze employeeDetails variable
 let employeeDetails = []
 Employee details will be contained in an array of objects
