@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'
 import Heading from '../components/heading';
 
-function User(){
+function User(props){
     const navigate = useNavigate();
 
     const handleSubmit = () => {
