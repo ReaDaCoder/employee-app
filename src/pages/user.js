@@ -10,23 +10,30 @@ function User(){
         navigate('/admin');
       };
 
+      const [name, setName]= useState('');
+      const [surname, setLastName]= useState('');
+      const [email, setEmail]= useState('');
+      const [cell, setCell]= useStae('');
+      const [position, setPosition]= useState('');
+      const [department, setDepartment]= useState('');
+
 
     return(
         <div class="wrapper">
             <button onClick={handleSubmit}>Switch to Admin</button>
             <div class="box1">
             <h1>User Page</h1>
-            <input type="text" placeholder="Enter name"/>
+            <input type="text" placeholder="Enter name" onChange={(event)=> setName(event.target.value)} />
             <br/>
-            <input type="text" placeholder="Enter surname"/>
+            <input type="text" placeholder="Enter surname" onChange={(event)=> setLastName(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Enter email address"/>
+            <input type="text" placeholder="Enter email address" onChange={(event)=> setEmail(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Cell number"/>
+            <input type="text" placeholder="Cell number" onChange={(event)=> setCell(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Position"/>
+            <input type="text" placeholder="Position" onChange={(event)=> setPosition(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Enter department"/>
+            <input type="text" placeholder="Enter department" onChange={(event)=> setDepartment(event.target.value)}/>
             <br/>
             <button onClick={handleSubmit}>Submit</button>
             </div>
