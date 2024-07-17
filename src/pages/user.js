@@ -15,7 +15,7 @@ function User(props){
       const [name, setName]= useState('');
       const [surname, setLastName]= useState('');
       const [email, setEmail]= useState('');
-      const [cell, setCell]= useStae('');
+      const [cell, setCell]= useState('');
       const [position, setPosition]= useState('');
       const [department, setDepartment]= useState('');
 
