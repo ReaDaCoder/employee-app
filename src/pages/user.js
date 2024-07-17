@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'
 import Heading from '../components/heading';
 
+import {useState} from "react";
+
 function User(props){
     const navigate = useNavigate();
 
