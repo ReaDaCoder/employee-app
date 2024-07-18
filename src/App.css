@@ -1,4 +1,12 @@
 .wrapper{
+  justify-content: center;
+  margin: 25px;
+  padding:50px;
+  border-radius: 18px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.infoBox{
   display: flex;
   justify-content: center;
   margin: 25px;
@@ -6,6 +14,20 @@
   border-radius: 18px;
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
+
+.switchBtn{
+  color:#fff;
+  padding:12px;
+  margin:10px auto;
+  width:200px;
+  border-radius: 6px;
+  border:0;
+  display:block;
+  background: #007DFE;
+  transition: all 0.2s ease;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .box1{
   background-color:#AACBFF;
   padding: 35px;
@@ -25,12 +47,15 @@ img{
   width:500px;
 }
 
-button{
+#submit-btn{
   color:#fff;
-  padding:8px 22px;
+  padding:12px;
+  margin:10px auto;
+  width:200px;
   border-radius: 6px;
   border:0;
-  background: #AACBFF;
+  display:block;
+  background: #007DFE;
   transition: all 0.2s ease;
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -49,6 +74,42 @@ background-color: #AACBFF;
 text-align: center;
 }
 
+/*.hero{
+  width:50%;
+  height:100vh;
+  background:#d1d1d1;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}*/
+
+.card{
+  width:150px;
+  height:25vh;
+  background:#fff;
+  padding:40px;
+  border-radius:15px;
+  text-align:center;
+  color:#333;
+}
+.card img{
+  width:140px;
+  border-radius:50%;
+  margin-top:40px;
+  margin-bottom:30px;
+}
+#input-file{
+  display:none;
+}
+#update-img{
+  background-color: #007DFE;
+  width:150px;
+  color:#fff;
+  padding:12px;
+  margin:10px auto;
+  border-radius:5px;
+  cursor:pointer;
+}
 
 @media(max-width:600px){
   img{
