@@ -5,6 +5,7 @@ import Heading from '../components/heading';
 import {useState} from "react";
 
 function User(props){
+    console.log(props);
     const navigate = useNavigate();
 
     const handleSubmit = () => {
