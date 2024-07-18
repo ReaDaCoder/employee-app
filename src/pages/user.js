@@ -23,6 +23,8 @@ function User(props){
       const add= (()=>{
         props.add(name, surname, email, cell, position, department, image);
 
+        localStorage.setItem('EmployeeList', JSON.stringify(add));
+
         console.log(add);
       })
 
