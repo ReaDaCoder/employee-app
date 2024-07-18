@@ -86,6 +86,7 @@ text-align: center;
 .card{
   width:150px;
   height:25vh;
+  margin:20px;
   background:#fff;
   padding:40px;
   border-radius:15px;
