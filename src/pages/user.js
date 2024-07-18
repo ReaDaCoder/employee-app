@@ -18,9 +18,10 @@ function User(props){
       const [cell, setCell]= useState('');
       const [position, setPosition]= useState('');
       const [department, setDepartment]= useState('');
+      const [image, setImage]= useState('');
 
       const add= (()=>{
-        props.add(name, surname, email, cell, position, department);
+        props.add(name, surname, email, cell, position, department, image);
       })
 
 
@@ -46,7 +47,7 @@ function User(props){
                 <div class="card">
                     <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1"/>
                     <input type="file" accept="image/JPEG, image/png, image/jpg" id="input-file"/>
-                    <label for="input-file" id="update-img">Update</label>
+                    <label for="input-file" id="update-img"  onChange={(event)=> setImage(event.target.value)}>Update</label>
                 </div>
             </div>
             <button onClick={add} id="submit-btn">Submit</button>
