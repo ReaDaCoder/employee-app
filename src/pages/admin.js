@@ -7,6 +7,8 @@ export default function Portal (){
         <div className="container">
             <Heading/>
             <h1>User Management</h1>
+            <input type="text" placeholder="Search User"/>
+            <button class="searchUser">Search User</button>
           <div className="grid">
             <div class="box3">
                 <h2>Name</h2>

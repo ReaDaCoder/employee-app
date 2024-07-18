@@ -22,6 +22,8 @@ function User(props){
 
       const add= (()=>{
         props.add(name, surname, email, cell, position, department, image);
+
+        console.log(add);
       })
 
 
