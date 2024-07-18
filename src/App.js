@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import User from './pages/user';
 import Portal from './pages/admin';
-import useState from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
