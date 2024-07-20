@@ -34,8 +34,10 @@ function User(props){
         <div class="wrapper"> 
             <button onClick={handleSubmit} class="switchBtn">Switch to Admin</button>
             <div class="infoBox">
-            <div class="box1">
             <h1>User Page</h1>
+
+            <div class="box1">
+            <form>
             <input value={name} type="text" placeholder="Enter name" onChange={(event)=> setName(event.target.value)} />
             <br/>
             <input value={surname} type="text" placeholder="Enter surname" onChange={(event)=> setLastName(event.target.value)}/>
@@ -54,14 +56,16 @@ function User(props){
                     <input type="file" accept="image/JPEG, image/png, image/jpg" id="input-file"/>
                     <label for="input-file" id="update-img" value={image} onChange={(event)=> setImage(event.target.value)}>Update</label>
                 </div>
-            </div>
+                </div>
+            </form> 
+
             <button onClick={add} id="submit-btn">Submit</button>
             </div>
+
             <div class="box2">
             <img src="/media/4115334.jpg" alt="illustration of an employee portal"/>
             </div>
             </div>
-            
             </div>
     );
 }
