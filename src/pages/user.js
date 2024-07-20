@@ -36,23 +36,23 @@ function User(props){
             <div class="infoBox">
             <div class="box1">
             <h1>User Page</h1>
-            <input type="text" placeholder="Enter name" onChange={(event)=> setName(event.target.value)} />
+            <input value={name} type="text" placeholder="Enter name" onChange={(event)=> setName(event.target.value)} />
             <br/>
-            <input type="text" placeholder="Enter surname" onChange={(event)=> setLastName(event.target.value)}/>
+            <input value={surname} type="text" placeholder="Enter surname" onChange={(event)=> setLastName(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Enter email address" onChange={(event)=> setEmail(event.target.value)}/>
+            <input value={email} type="text" placeholder="Enter email address" onChange={(event)=> setEmail(event.target.value)}/>
             <br/>
-            <input type="number" placeholder="Cell number" onChange={(event)=> setCell(event.target.value)}/>
+            <input value={cell} type="number" placeholder="Cell number" onChange={(event)=> setCell(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Position" onChange={(event)=> setPosition(event.target.value)}/>
+            <input value={position} type="text" placeholder="Position" onChange={(event)=> setPosition(event.target.value)}/>
             <br/>
-            <input type="text" placeholder="Enter department" onChange={(event)=> setDepartment(event.target.value)}/>
+            <input value={department} type="text" placeholder="Enter department" onChange={(event)=> setDepartment(event.target.value)}/>
             <br/>
             <div class="hero">
                 <div class="card">
                     <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1"/>
                     <input type="file" accept="image/JPEG, image/png, image/jpg" id="input-file"/>
-                    <label for="input-file" id="update-img"  onChange={(event)=> setImage(event.target.value)}>Update</label>
+                    <label for="input-file" id="update-img" value={image} onChange={(event)=> setImage(event.target.value)}>Update</label>
                 </div>
             </div>
             <button onClick={add} id="submit-btn">Submit</button>
