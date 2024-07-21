@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { useState } from 'react';
 import Heading from '../components/heading';
 import { useNavigate } from 'react-router-dom'
 
@@ -7,8 +8,15 @@ export default function Portal (props){
         const navigate = useNavigate();
     
         const handleSubmit = () => {
-            // Navigate to the admin page
             navigate('/user');
+        }
+
+        const didplayEmployee =()=>_{
+            let table= document.querySelector('.grid');
+
+            for (let i=0; i < data.lenght; i++){
+                let row= 
+            }
         }
 
 
@@ -22,12 +30,15 @@ export default function Portal (props){
           <div className="grid">
             <div class="box3">
                 <h2>Name</h2>
+                <ul></ul>
                 </div>
             <div class="box4">
                 <h2>Roles</h2>
+                <ul></ul>
             </div>
             <div class="box5">
                 <h2>Actions</h2>
+                <ul></ul>
             </div>
           </div>
 
