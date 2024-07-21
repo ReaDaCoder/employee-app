@@ -26,6 +26,8 @@ function User() {
 
     const handleSwitchToAdmin = () => {
         navigate('/admin');
+
+        localStorage.setEmployees('EmployeeList', JSON.stringify(employees));
     };
 
     return (
@@ -66,6 +68,6 @@ function User() {
 }
 
 export default User;
-
+ 
 
 
