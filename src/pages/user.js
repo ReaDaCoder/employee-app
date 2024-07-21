@@ -1,73 +1,71 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Heading from '../components/heading';
 
-import {useState} from "react";
+function User() {
 
-function User(props){
-    console.log(props);
+    const [employees, setEmployees] = useState([]);
     const navigate = useNavigate();
 
-    const handleSubmit = () => {
-        // Navigate to the admin page
+    const addEmployee = (ev) => {
+        ev.preventDefault();
+        let employee = {
+            name: ev.target.form.name.value,
+            surname: ev.target.form.surname.value,
+            email: ev.target.form.email.value,
+            cell: ev.target.form.cell.value,
+            position: ev.target.form.position.value,
+            department: ev.target.form.department.value,
+        }
+
+        setEmployees([...employees, employee]);
+        console.warn('added', { employees: [...employees, employee] });
+
+        ev.target.form.reset();
+    };
+
+    const handleSwitchToAdmin = () => {
         navigate('/admin');
-      };
+    };
 
-      const [name, setName]= useState('');
-      const [surname, setLastName]= useState('');
-      const [email, setEmail]= useState('');
-      const [cell, setCell]= useState('');
-      const [position, setPosition]= useState('');
-      const [department, setDepartment]= useState('');
-      const [image, setImage]= useState('');
-
-      const add= (()=>{
-        props.add(name, surname, email, cell, position, department, image);
-
-        localStorage.setItem('EmployeeList', JSON.stringify(add));
-
-        console.log(add);
-      })
-
-
-    return(
-        <div class="wrapper"> 
-            <button onClick={handleSubmit} class="switchBtn">Switch to Admin</button>
-            <div class="infoBox">
-            <h1>User Page</h1>
-
-            <div class="box1">
-            <form>
-            <input value={name} type="text" placeholder="Enter name" onChange={(event)=> setName(event.target.value)} />
-            <br/>
-            <input value={surname} type="text" placeholder="Enter surname" onChange={(event)=> setLastName(event.target.value)}/>
-            <br/>
-            <input value={email} type="text" placeholder="Enter email address" onChange={(event)=> setEmail(event.target.value)}/>
-            <br/>
-            <input value={cell} type="number" placeholder="Cell number" onChange={(event)=> setCell(event.target.value)}/>
-            <br/>
-            <input value={position} type="text" placeholder="Position" onChange={(event)=> setPosition(event.target.value)}/>
-            <br/>
-            <input value={department} type="text" placeholder="Enter department" onChange={(event)=> setDepartment(event.target.value)}/>
-            <br/>
-            <div class="hero">
-                <div class="card">
-                    <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1"/>
-                    <input type="file" accept="image/JPEG, image/png, image/jpg" id="input-file"/>
-                    <label for="input-file" id="update-img" value={image} onChange={(event)=> setImage(event.target.value)}>Update</label>
+    return (
+        <div className="wrapper">
+            <button onClick={handleSwitchToAdmin} className="switchBtn">Switch to Admin</button>
+            <div className="infoBox">
+                <h1>User Page</h1>
+                <div className="box1">
+                    <form>
+                        <input type="text" id="name" placeholder="Enter name" />
+                        <br />
+                        <input type="text" id="surname" placeholder="Enter surname" />
+                        <br />
+                        <input type="text" id="email" placeholder="Enter email address" />
+                        <br />
+                        <input type="number" id="cell" placeholder="Cell number" />
+                        <br />
+                        <input type="text" id="position" placeholder="Position" />
+                        <br />
+                        <input type="text" id="department" placeholder="Enter department" />
+                        <br />
+                        <div className="hero">
+                            <div className="card">
+                                <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1" alt="User" />
+                                <input type="file" accept="image/JPEG, image/png, image/jpg" id="input-file" />
+                                <label htmlFor="input-file" id="update-img">Update</label>
+                            </div>
+                        </div>
+                        <button type="button" id="submit-btn" onClick={addEmployee}>Submit</button>
+                    </form>
                 </div>
+                <div className="box2">
+                    <img src="/media/4115334.jpg" alt="illustration of an employee portal" />
                 </div>
-            </form> 
-
-            <button onClick={add} id="submit-btn">Submit</button>
             </div>
-
-            <div class="box2">
-            <img src="/media/4115334.jpg" alt="illustration of an employee portal"/>
-            </div>
-            </div>
-            </div>
+        </div>
     );
 }
 
 export default User;
+
+
+
