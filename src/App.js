@@ -23,7 +23,3 @@ export default function App() {
     </div>
   );
 }
-
-/*<Route index element={<User />} />
-      <Route path="/user" element={<User />} />
-      <Route path="/admin" element={<Portal />} />*/

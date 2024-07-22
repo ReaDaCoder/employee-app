@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Heading from '../components/heading';
 
 function User() {
-
-    const [employees, setEmployees] = useState([]);
+    const [employees, setEmployees] = useState(() => {
+        const storedEmployees = localStorage.getItem('employees');
+        return storedEmployees ? JSON.parse(storedEmployees) : [];
+    });
     const navigate = useNavigate();
+
+    useEffect(() => {
+        localStorage.setItem('employees', JSON.stringify(employees));
+    }, [employees]);
 
     const addEmployee = (ev) => {
         ev.preventDefault();
@@ -26,8 +32,6 @@ function User() {
 
     const handleSwitchToAdmin = () => {
         navigate('/admin');
-
-        localStorage.setEmployees('EmployeeList', JSON.stringify(employees));
     };
 
     return (
@@ -68,6 +72,4 @@ function User() {
 }
 
 export default User;
- 
-
 

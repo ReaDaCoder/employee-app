@@ -1,4 +1,4 @@
-import React from 'react';
+
 import React, { useState } from 'react';
 import Heading from '../components/heading';
 import { useNavigate } from 'react-router-dom'
@@ -11,13 +11,6 @@ export default function Portal (props){
             navigate('/user');
         }
 
-        const didplayEmployee =()=>_{
-            let table= document.querySelector('.grid');
-
-            for (let i=0; i < data.lenght; i++){
-                let row= 
-            }
-        }
 
 
     return(
@@ -40,6 +33,7 @@ export default function Portal (props){
                 <h2>Actions</h2>
                 <ul></ul>
             </div>
+            <div class="workers"></div>
           </div>
 
         </div>
