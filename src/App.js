@@ -3,8 +3,8 @@ import './App.css';
 import User from './pages/user';
 import Portal from './pages/admin';
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { EmployeeProvider } from './context/EmployeeContext';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { EmployeeProvider } from './components/context/EmployeeContext';
 
 
 

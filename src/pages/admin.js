@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Heading from '../components/heading';
 import { useNavigate } from 'react-router-dom';
-import { EmployeeContext } from '../context/EmployeeContext';
+import { EmployeeContext } from '../components/context/EmployeeContext';
 
 export default function Portal() {
     const navigate = useNavigate();
