@@ -4,6 +4,11 @@ import User from './pages/user';
 import Portal from './pages/admin';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 
 

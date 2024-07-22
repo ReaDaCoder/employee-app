@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Heading from '../components/heading';
 import { useNavigate } from 'react-router-dom';
-import { EmployeeContext } from '../context/EmployeeContext'
 
 
 export default function Portal (props){
