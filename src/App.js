@@ -4,6 +4,7 @@ import User from './pages/user';
 import Portal from './pages/admin';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { EmployeeProvider } from './context/EmployeeContext';
 
 
 
