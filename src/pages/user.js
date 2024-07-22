@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { EmployeeContext } from '../components/context/EmployeeContext';
 import Heading from '../components/heading';
 
 function User() {

@@ -3,8 +3,7 @@ import './App.css';
 import User from './pages/user';
 import Portal from './pages/admin';
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { EmployeeProvider } from './components/context/EmployeeContext';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -14,7 +13,7 @@ export default function App() {
 
   return (
     <div className="App">
-     <BrowserRouter>
+      <BrowserRouter>
      <Routes>
      <Route index element={<User />} />
         <Route path="/user" element={<User />} />
