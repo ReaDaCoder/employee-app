@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import LoginPage from './pages/loginPage';
 import User from './pages/user';
 import Portal from './pages/admin';
 import { useState } from 'react';
@@ -20,7 +21,7 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
      <Routes>
-     <Route index element={<User />} />
+     <Route index element={<LoginPage />} />
         <Route path="/user" element={<User />} />
         <Route path="/admin" element={<Portal />} />
      </Routes>
