@@ -10,6 +10,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import RegistrationPage from './pages/registrationPage';
 
 
 
@@ -22,8 +23,9 @@ export default function App() {
       <BrowserRouter>
      <Routes>
      <Route index element={<LoginPage />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/admin" element={<Portal />} />
+     <Route path="/registration" element={<RegistrationPage />} />
+     <Route path="/user" element={<User />} />
+      <Route path="/admin" element={<Portal />} />
      </Routes>
      </BrowserRouter>
     </div>
