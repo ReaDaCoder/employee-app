@@ -16,6 +16,7 @@ export default function Portal (props){
         <div className="container">
             <Heading/>
             <button onClick={handleSubmit} class="switchBtn">Switch to User</button>
+            <div className="add-user-container"></div>
             <h1>User Management</h1>
             <input type="text" placeholder="Search User" class="searchUserInput"/>
             <button class="searchUser">Search User</button>
