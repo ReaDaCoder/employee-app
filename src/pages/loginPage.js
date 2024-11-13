@@ -3,6 +3,11 @@ import {useNavigation, useNavigate, Link} from "react-router-dom";
 import {app, database} from '../firebaseConfig';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
+const express = require('express');
+const cookieSession = require('cookie-session');
+
+
+
 
 export default function LoginPage(){
     let auth = getAuth();
@@ -20,7 +25,7 @@ export default function LoginPage(){
       event.preventDefault();
       signInWithEmailAndPassword(auth, data.email, data.password).then((response) =>{
         console.log("User successfully logged in:", response.user);
-        navigate('/HomePage');
+        navigate('/user');
         //console.log(response.user)
       })
       .catch((err) =>{

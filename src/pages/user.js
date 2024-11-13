@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Heading from '../components/heading';
+
 
 function User() {
     const [employees, setEmployees] = useState(() => {
