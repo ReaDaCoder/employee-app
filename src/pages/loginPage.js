@@ -3,8 +3,8 @@ import {useNavigation, useNavigate, Link} from "react-router-dom";
 import {app, database} from '../firebaseConfig';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-const express = require('express');
-const cookieSession = require('cookie-session');
+//const express = require('express');
+//const cookieSession = require('cookie-session');
 
 
 
