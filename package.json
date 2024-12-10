@@ -16,6 +16,7 @@
     "firebase-cookie-session": "^3.0.0",
     "fs": "^0.0.1-security",
     "https": "^1.0.0",
+    "json-server": "^1.0.0-beta.3",
     "path-browserify": "^1.0.1",
     "querystring-es3": "^0.2.1",
     "react": "^18.3.1",
