@@ -1,10 +1,48 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  color: white;
+  font-family: "Kanit", serif
+}
+
+.heading-container h1{
+  align-items: center;
+  justify-content: center;
+  color: #007DFE;
+  text-align: center;
+  font-family: "Kanit", serif;
+  font-size: 70px;
+  font-weight: 600;
+  padding: 0px 30px;
+  margin-bottom: 50px;
+}
+
+.signup-heading{
+  align-items: center;
+  justify-content: center;
+  color: #007DFE;
+  text-align: center;
+  font-family: "Kanit", serif;
+  font-size: 65px;
+  font-weight: 500;
+  padding: 0px 30px;
+  margin-bottom: 50px;
+}
+
+
 .login-container{
-  background-color: #333;
+  border: #007DFE;
+  border-radius: 12px;
 }
 .grid-container {
   display: flex;
-  justify-content: space-around;
-  background-color: #333;
+  justify-content: space-evenly;
+  border: #007DFE;
 
 }
 .wrapper{
@@ -24,11 +62,12 @@
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.switchBtn{
+.btn-btn-primary{
   color:#fff;
   padding:12px;
   margin:10px auto;
-  width:200px;
+  margin-bottom: 15px;
+  width:190px;
   border-radius: 6px;
   border:0;
   display:block;
@@ -47,7 +86,7 @@ input{
 background-color: #fff;
 padding:8px 22px;
 border-radius: 9px;
-margin-bottom: 7px;
+margin-bottom: 12px;
 border: 0;
 box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -56,7 +95,8 @@ box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 img{
-  width:500px;
+  width:400px;
+  border-radius: 16px;
 }
 
 #submit-btn{
@@ -84,6 +124,11 @@ button:active{
 .container{
 background-color: #AACBFF;
 text-align: center;
+}
+
+.signup-box{
+  align-items: center;
+  justify-content: center;
 }
 
 /*.hero{

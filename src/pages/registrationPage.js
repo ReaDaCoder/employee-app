@@ -61,7 +61,9 @@ export default function RegistrationPage(){
   }
     return(
         <div>
+          <div className="signup-heading">
           <h1>Sign up</h1>
+          </div>
             <div className="signup-box">
       <form onSubmit={handleSubmit}>
         <input

@@ -2,24 +2,35 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
+  function handleSubmit(e){
+    e.preventDefault()
+
+  }
   return (
+
+    
     <div>
+      <div className="heading-container">
+        <h1>Login</h1>
+      </div>
       <div className="grid-container">
         <div className="grid-item">
-          <img src="/public/media/front.jpg" />
+          <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?t=st=1738002667~exp=1738006267~hmac=ff4724a3789f01203d8ca66fa95fb701919f252625b537484558dd3f45482a22&w=740" />
         </div>
         <div className="grid-item">
           <input
             name="email"
             placeholder="type email"
-           // onChange={(event) => handleInput(event)}
+            // onChange={(event) => handleInput(event)}
           />
-          <br/>
-           <input
-           name="password"
-           placeholder="enter password"
-           //onChange={(event) => handleInput(event)}
-         />
+          <br />
+          <input
+            name="password"
+            placeholder="enter password"
+            //onChange={(event) => handleInput(event)}
+          />
+           <button type="submit" className="btn-btn-primary" onClick={handleSubmit}>Submit</button>
+           <Link to="RegistrationPage">Don't have an account : Sign Up</Link>
         </div>
       </div>
     </div>
