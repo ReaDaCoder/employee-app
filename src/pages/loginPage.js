@@ -1,9 +1,30 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import {app, database} from '../firebaseConfig';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
+
+  let auth = getAuth();
+  const [data, setData] = useState('');
+  const navigate = useNavigate();
+
+  function handleInput(event){
+    let newInput = {[event.target.name]: event.target.value};
+
+    setData({...data, ...newInput});
+  }
+
   function handleSubmit(e){
     e.preventDefault()
+    signInWithEmailAndPassword(auth, data.email, data.password).then((response) =>{
+      console.log("User successfully logged in:", response.user);
+      navigate('/HomePage');
+      //console.log(response.user)
+    })
+    .catch((err) =>{
+      alert(err.message)
+    });
 
   }
   return (
